@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Shopping List</title>
+  </head>
+  <body>
+    <div class="shopping">
+      <div class="container">
+        <div class="shopping__wrapper">
+          <div class="shopping__top">
+            <h1 class="shopping__heading">Shopping List</h1>
+            <form class="shopping__form">
+              <input
+                type="text"
+                class="shopping__title"
+                placeholder="Title..."
+              />
+              <input
+                type="number"
+                min="1"
+                class="shopping__count"
+                placeholder="Count"
+              />
+              <button type="submit" class="shopping__btn">Add</button>
+            </form>
+          </div>
+          <div class="shopping__bottom">
+            <ul class="shopping__list">
+              <!-- <li class="shopping__item item">
+                <div class="item__wrapper">
+                  <p class="item__count">14</p>
+                  <p class="item__title">Buy Bananas</p>
+                </div>
+                <img alt="del" src="x.svg" class="item__del"></img>
+              </li>
+              <li class="shopping__item item">
+                <div class="item__wrapper">
+                  <p class="item__count">14</p>
+                  <p class="item__title">Buy Bananas</p>
+                </div>
+                <img alt="del" src="x.svg" class="item__del"></img>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
