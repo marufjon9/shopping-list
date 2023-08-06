@@ -4,6 +4,10 @@ let elCount = document.querySelector(".shopping__count");
 let elList = document.querySelector(".shopping__list");
 let i = 0;
 
+const search = document.querySelector(".shopping__filter");
+const searchInput = document.querySelector(".shopping__search");
+const searchBtn = document.querySelector(".shopping__button");
+
 let list = [
   {
     count: 4,
@@ -37,7 +41,9 @@ const renderList = function (array) {
 
     let delElement = document.createElement("img");
     delElement.classList.add("item__del");
+
     delElement.setAttribute("id", `remove-list-${i}`);
+
     delElement.setAttribute(
       "src",
       "https://www.svgrepo.com/show/499905/delete.svg",
@@ -60,6 +66,7 @@ const renderList = function (array) {
     elList.append(liElement);
   });
 
+  // let del = document.querySelector("#remove-list-" + i);
   let del = document.querySelector("#remove-list-" + i);
 
   del.addEventListener("click", function () {
@@ -89,4 +96,15 @@ elForm.addEventListener("submit", function (e) {
   renderList(list);
   elTitle.value = "";
   elCount.value = "";
+});
+
+search.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const searchValue = searchInput.value.trim();
+
+  let filtered = list.filter((element) => {
+    return element.title == searchValue;
+  });
+
+  renderList(filtered);
 });
